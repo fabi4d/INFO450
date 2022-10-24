@@ -57,13 +57,12 @@ def main():
     with open('numbers.txt') as f:
         lines = f.readlines()
         lines = [line.rstrip() for line in lines]
-        my_list = lines.split(", ")
-        print(my_list)
+        my_list = lines[0].split(", ")
+    quicksort(my_list)
            
-        
-   # sorted = open("sorted.txt", "a")
-   # sorted.write(quicksort(lines))
-   # sorted.close()
+    sorted = open("sorted.txt", "a")
+    sorted.write(quicksort(lines))
+    sorted.close()
         
 
     return sorted
